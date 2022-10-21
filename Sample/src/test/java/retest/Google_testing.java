@@ -9,8 +9,7 @@ public class Google_testing
    @Test
 	public void smoketest()
 	{
-		Google google=new Google();
-		google.setup();
+		Google google=new Google();		
 		google.search();
 	}
 }
