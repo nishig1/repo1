@@ -10,6 +10,7 @@ public class Google_testing
 	public void smoketest()
 	{
 		Google google=new Google();
+		google.setup();
 		google.search();
 	}
 }
