@@ -9,21 +9,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Google 
 {
-	  String sbrowser=System.getProperty("browsername");	
-	  WebDriver driver;	  
 	 
 	  public void search()
 	  {
-		  if(sbrowser=="chrome")
-		  {		  
-			  WebDriverManager.chromedriver().setup();
-			  driver=new ChromeDriver();
-		  }
-		   if(sbrowser=="firefox")
-		  {		  
-			  WebDriverManager.firefoxdriver().setup();
-			  driver=new FirefoxDriver();
-		  }
+			  
+		  WebDriverManager.chromedriver().setup();
+		  ChromeDriver driver=new ChromeDriver();		 
 		  driver.manage().window().maximize();
 		  driver.get("http://www.google.com");
 		  driver.findElement(By.name("q")).sendKeys("java");
